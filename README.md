@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✦ Modern Creative Developer Portfolio
 
-## Getting Started
+A high-end, responsive personal portfolio website hand-architected with **Next.js 16 (App Router)**, **Tailwind CSS v4**, **Framer Motion**, **Lenis Smooth Scroll**, and **GSAP/Canvas WebGL**.
 
-First, run the development server:
+Designed with an asymmetric editorial aesthetic: deep onyx dark mode by default with light mode toggle, electric acid lime (`#D4FF00`) accents, typographic pairing of *Space Grotesk* and *DM Sans*, interactive particle constellation physics, and micro-interactions.
+
+---
+
+## ⚡ Tech Stack & Features
+
+- **Next.js 16 (App Router)**: Fast Server-Side Rendering & Client streaming.
+- **Tailwind CSS v4**: Theme custom variables, responsive grid, dynamic utilities.
+- **Framer Motion**: Line-by-line masked typography reveals, layout animations, modals.
+- **Lenis**: Momentum-based smooth scrolling with `prefers-reduced-motion` fallbacks.
+- **Interactive Hero Canvas**: Math-based particle constellation with magnetic repulsion & velocity smoothing.
+- **Custom Cursor**: Spring-interpolated pointer with dynamic hover states (`VIEW`, `POINTER`).
+- **Single Source of Truth**: All personal data, projects, skills, timeline, and credentials are configured in `/src/data/portfolio.ts`.
+- **Preloader**: Kinetic loading percentage counter and name reveal.
+- **Full Theme Toggle**: Instant switch between Dark Onyx and Clean Light mode.
+- **Accessible & SEO Ready**: Meta tags, OpenGraph previews, semantic HTML5 landmarks.
+
+---
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── public/
+│   ├── me.jpg               # Your profile photo (replace with your portrait)
+│   ├── resume.pdf           # Downloadable resume PDF
+│   └── projects/            # Project showcase previews
+├── src/
+│   ├── app/
+│   │   ├── globals.css      # Design tokens, variables & animations
+│   │   ├── layout.tsx       # Root layout, Google Fonts, OpenGraph metadata
+│   │   └── page.tsx         # Assembled portfolio sections
+│   ├── components/
+│   │   ├── Navbar.tsx       # Floating glass dock & mobile navigation
+│   │   ├── Hero.tsx         # Asymmetric hero, masked reveal, portrait
+│   │   ├── HeroCanvas.tsx   # Interactive particle physics canvas
+│   │   ├── About.tsx        # Bio, tenets, and verified stats
+│   │   ├── Skills.tsx       # Infinite marquee & category skill matrix
+│   │   ├── Projects.tsx     # Project cards with spotlight & modal trigger
+│   │   ├── ProjectModal.tsx # Architectural specs and metrics modal
+│   │   ├── Timeline.tsx     # Vertical experience & education tree
+│   │   ├── Certifications.tsx # Credential cards with verify links
+│   │   ├── ResumeSection.tsx  # Document preview & PDF download
+│   │   ├── Contact.tsx      # Contact form, email copy, confetti, social links
+│   │   ├── Footer.tsx       # Real-time local clock, status, back-to-top
+│   │   ├── CustomCursor.tsx # Spring follower cursor
+│   │   ├── Preloader.tsx    # Kinetic intro sequence
+│   │   ├── ScrollProgress.tsx # Top scroll progress line
+│   │   └── SmoothScroll.tsx # Lenis smooth scroll wrapper
+│   ├── context/
+│   │   └── ThemeContext.tsx # Light/Dark theme state and persistence
+│   ├── data/
+│   │   └── portfolio.ts     # ⭐️ EDIT ALL YOUR INFORMATION HERE
+│   └── types/
+│       └── portfolio.ts     # TypeScript interface definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ How to Customize with Your Information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All portfolio content is decoupled into a single configuration file:
+👉 **[`src/data/portfolio.ts`](src/data/portfolio.ts)**
 
-## Learn More
+1. **Personal Information**:
+   - Change `name`, `role`, `tagline`, `bio`, `location`, `email`, and `stats`.
+2. **Profile Photo**:
+   - Place your photo at `public/me.jpg` (or update `photo: "/your-image.png"`).
+3. **Resume**:
+   - Place your PDF resume at `public/resume.pdf`.
+4. **Skills**:
+   - Edit `skills` and `marqueeSkills` arrays.
+5. **Projects**:
+   - Add your projects to `projects` array with title, description, tags, live URLs, and GitHub links.
+6. **Experience & Education**:
+   - Update `timeline` with your roles, companies, dates, and accomplishments.
+7. **Certifications**:
+   - Add your certificates with verify URLs and credential IDs.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Local Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+2. Start the local development server:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Build for production:
+   ```bash
+   npm run build
+   npm run start
+   ```
+
+---
+
+## 🌐 Deploy to Vercel (1-Click)
+
+The fastest and most optimized way to deploy this portfolio is with **Vercel**:
+
+1. Push your repository to **GitHub** / **GitLab** / **Bitbucket**.
+2. Visit [Vercel](https://vercel.com/new).
+3. Import your repository.
+4. Framework Preset will be automatically detected as **Next.js**.
+5. Click **Deploy**. Your portfolio will be live on a custom `.vercel.app` domain with global edge caching and free SSL.

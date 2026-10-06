@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f" />
+      <stop offset="50%" stop-color="#14141d" />
+      <stop offset="100%" stop-color="#08080a" />
+    </linearGradient>
+    <linearGradient id="limeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4ff00" />
+      <stop offset="100%" stop-color="#95b800" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="auraGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="rgba(212, 255, 0, 0.25)" />
+      <stop offset="100%" stop-color="rgba(212, 255, 0, 0)" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1000" fill="url(#bgGrad)" />
+  <rect width="800" height="1000" fill="url(#grid)" />
+  <circle cx="400" cy="400" r="380" fill="url(#auraGlow)" />
+
+  <!-- Abstract Architectural Portrait Silhouette with High Fashion / Cyber Aesthetics -->
+  <g transform="translate(400, 480)" text-anchor="middle">
+    <!-- Geometric Body & Silhouette -->
+    <path d="M -180 400 C -170 260 -120 180 -60 140 L 60 140 C 120 180 170 260 180 400 Z" fill="#1b1b24" stroke="#2c2c3a" stroke-width="2"/>
+    <path d="M -90 140 L -40 70 L 40 70 L 90 140 Z" fill="#15151e" stroke="#2c2c3a" stroke-width="1.5" />
+    
+    <!-- Head silhouette -->
+    <ellipse cx="0" cy="-20" rx="95" ry="125" fill="#20202d" stroke="#36364c" stroke-width="2"/>
+    
+    <!-- Cybernetic / Creative Glasses Frame -->
+    <rect x="-80" y="-45" width="70" height="36" rx="6" fill="#0d0d12" stroke="#d4ff00" stroke-width="3"/>
+    <rect x="10" y="-45" width="70" height="36" rx="6" fill="#0d0d12" stroke="#d4ff00" stroke-width="3"/>
+    <line x1="-10" y1="-27" x2="10" y2="-27" stroke="#d4ff00" stroke-width="3"/>
+
+    <!-- Lens Reflection Highlights -->
+    <line x1="-70" y1="-40" x2="-20" y2="-15" stroke="rgba(212,255,0,0.4)" stroke-width="2"/>
+    <line x1="20" y1="-40" x2="70" y2="-15" stroke="rgba(212,255,0,0.4)" stroke-width="2"/>
+
+    <!-- Technical Crosshairs & Interface Overlays -->
+    <circle cx="0" cy="-20" r="160" fill="none" stroke="rgba(212,255,0,0.15)" stroke-width="1" stroke-dasharray="4 8"/>
+    <circle cx="0" cy="-20" r="210" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+  </g>
+
+  <!-- Modern Graphic Overlay Typography -->
+  <text x="60" y="880" fill="#d4ff00" font-family="monospace" font-size="14" letter-spacing="4">ALEX VANCE // DEV.SYSTEMS</text>
+  <text x="60" y="910" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="28" letter-spacing="-0.5">CREATIVE TECHNOLOGIST</text>
+  <text x="740" y="910" fill="#888899" font-family="monospace" font-size="14" text-anchor="end">SYS.REF: #2026.04</text>
+  <line x1="60" y1="935" x2="740" y2="935" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+  <text x="60" y="960" fill="#666677" font-family="monospace" font-size="11">LAT 37.7749° N, LON 122.4194° W • CORE ARCHITECTURE</text>
+</svg>
